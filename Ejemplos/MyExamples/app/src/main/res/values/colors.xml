@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  
+  <!-- Colores App -->
+  <color name="colorPrimary">#3F51B5</color>
+  <color name="colorPrimaryDark">#303F9F</color>
+  <color name="colorPrimaryLight">#C5CAE9</color>
+  <color name="colorAccent">#FFC107</color>
+  <color name="colorDivider">#B6B6B6</color>  
+
+  <!-- Color Textos -->
+  <color name="colorPrimaryTextIcons">#FFFFFF</color>
+  <color name="colorPrimaryText">#212121</color>
+  <color name="colorSecondaryText">#727272</color>
+  
+  <!-- Color Navegacion -->
+  <color name="colorWindowBackground">#FFFFFF</color>  
+  <color name="colorNavigationBar">#303F9F</color>
+  
+</resources>

@@ -1,0 +1,7 @@
+<resources>
+  <string name="app_name">My Examples</string>
+
+  <string name="hello_world">Hello world!</string>
+  <string name="action_settings">Configuracion</string>
+  <string name="action_search">Buscar</string>
+</resources>
