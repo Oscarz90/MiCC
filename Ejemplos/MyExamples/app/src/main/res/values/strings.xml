@@ -4,6 +4,8 @@
   <string name="hello_world">Hello world!</string>
   <string name="action_settings">Configuracion</string>
   <string name="action_search">Buscar</string>
+  <string name="drawer_open">Abrir</string>
+  <string name="drawer_close">Cerrar</string>
 
 
   <string name="nav_item_home">Home</string>
