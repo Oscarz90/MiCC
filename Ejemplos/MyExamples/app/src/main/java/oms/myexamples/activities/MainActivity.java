@@ -1,15 +1,20 @@
 package oms.myexamples.activities;
 
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 import oms.myexamples.R;
 import oms.myexamples.fragments.FragmentDrawer;
+import oms.myexamples.fragments.HomeFragment;
 
 public class MainActivity extends AppCompatActivity implements FragmentDrawer.FragmentDrawerListener {
   private Toolbar toolbar;
@@ -27,8 +32,10 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
 
     drawerFragment=(FragmentDrawer)getSupportFragmentManager().findFragmentById(R.id.fragment_navigation_drawer);
     drawerFragment.setUp(R.id.fragment_navigation_drawer,(DrawerLayout)findViewById(R.id.drawer_layout),toolbar);
-    drawerFragment.setDrawerLinstener(this);
+    drawerFragment.setDrawerListener(this);
 
+    // display the first navigation drawer view on app launch
+    displayView(0);
 
   }
 
@@ -47,7 +54,8 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
     int id = item.getItemId();
 
     //noinspection SimplifiableIfStatement
-    if (id == R.id.action_settings) {
+    if(id == R.id.action_search){
+      Toast.makeText(getApplicationContext(), "Search action is selected!", Toast.LENGTH_SHORT).show();
       return true;
     }
 
@@ -55,6 +63,34 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
   }
   @Override
   public void onDrawerItemSelected(View view, int position){
+    displayView(position);
+  }
+
+  private void displayView(int position){
+    HomeFragment fragment=null;
+    String title = getString(R.string.app_name);
+    switch (position){
+      case 0:
+        fragment = new HomeFragment();
+        title = getString(R.string.title_home);
+        break;
+      case 1:
+        break;
+      case 2:
+        break;
+      default:
+        break;
+    }
+
+    if(fragment!=null){
+      FragmentManager fragmentManager = getSupportFragmentManager();
+      FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+      fragmentTransaction.replace(R.id.container_body, fragment);
+      fragmentTransaction.commit();
+
+      // set the toolbar title
+      getSupportActionBar().setTitle(title);
+    }
 
   }
 }
