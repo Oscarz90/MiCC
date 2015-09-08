@@ -12,13 +12,15 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
+import oms.myexamples.fragments.MessagesFragment;
 import oms.myexamples.R;
-import oms.myexamples.fragments.FragmentDrawer;
+import oms.myexamples.fragments.DrawerFragment;
+import oms.myexamples.fragments.FriendsFragment;
 import oms.myexamples.fragments.HomeFragment;
 
-public class MainActivity extends AppCompatActivity implements FragmentDrawer.FragmentDrawerListener {
+public class MainActivity extends AppCompatActivity implements DrawerFragment.FragmentDrawerListener {
   private Toolbar toolbar;
-  private FragmentDrawer drawerFragment;
+  private DrawerFragment drawerFragment;
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
@@ -30,7 +32,7 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
       getSupportActionBar().setDisplayShowHomeEnabled(true);
     }
 
-    drawerFragment=(FragmentDrawer)getSupportFragmentManager().findFragmentById(R.id.fragment_navigation_drawer);
+    drawerFragment=(DrawerFragment)getSupportFragmentManager().findFragmentById(R.id.fragment_navigation_drawer);
     drawerFragment.setUp(R.id.fragment_navigation_drawer,(DrawerLayout)findViewById(R.id.drawer_layout),toolbar);
     drawerFragment.setDrawerListener(this);
 
@@ -67,7 +69,7 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
   }
 
   private void displayView(int position){
-    HomeFragment fragment=null;
+    Fragment fragment=null;
     String title = getString(R.string.app_name);
     switch (position){
       case 0:
@@ -75,8 +77,12 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
         title = getString(R.string.title_home);
         break;
       case 1:
+        fragment = new FriendsFragment();
+        title = getString(R.string.title_friends);
         break;
       case 2:
+        fragment = new MessagesFragment();
+        title = getString(R.string.title_friends);
         break;
       default:
         break;

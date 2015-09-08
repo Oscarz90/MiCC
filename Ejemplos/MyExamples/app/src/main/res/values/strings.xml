@@ -8,6 +8,8 @@
   <string name="drawer_close">Cerrar</string>
 
   <string name="title_home">Home</string>
+  <string name="title_friends">Friends</string>
+  <string name="title_messages">Friends</string>
 
 
   <string name="nav_item_home">Home</string>
