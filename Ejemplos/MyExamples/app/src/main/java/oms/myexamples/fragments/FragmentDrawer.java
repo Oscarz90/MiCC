@@ -66,6 +66,12 @@ public class FragmentDrawer extends Fragment{
     recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
     recyclerView.addOnItemTouchListener(new RecyclerView.OnItemTouchListener() {
       @Override
+      public void onClick(View view, int position){
+        drawerListener.onDrawerItemSelected(view,position);
+        
+
+      }
+      @Override
       public boolean onInterceptTouchEvent(RecyclerView rv, MotionEvent e) {
 
         return false;
