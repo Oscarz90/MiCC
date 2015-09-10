@@ -8,13 +8,11 @@
         android:label="@string/app_name"
         android:theme="@style/MyMaterialTheme" >
         <activity
-            android:name=".activities.MainActivity"
-            android:label="@string/app_name" >
+            android:name=".activities.ContenidoActivity"
+            android:label="@string/activity.contenido.title" >
             <intent-filter>
-                
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
-                
             </intent-filter>
         </activity>
     </application>

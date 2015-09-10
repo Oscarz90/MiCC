@@ -3,7 +3,7 @@
 
   <style name="MyMaterialTheme" parent="MyMaterialTheme.Base">
 
-    <item name="android:navigationBarColor">@color/colorNavigationBar</item>
+    <item name="android:navigationBarColor">@color/color.navigation.bar</item>
 
     <item name="android:windowContentTransitions">true</item>
     <item name="android:windowAllowEnterTransitionOverlap">true</item>

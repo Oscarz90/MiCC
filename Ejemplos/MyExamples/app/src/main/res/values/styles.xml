@@ -8,13 +8,13 @@
   <style name="MyMaterialTheme.Base" parent="Theme.AppCompat.Light.DarkActionBar" >
     
     <!-- Color App -->
-    <item name="colorPrimary">@color/colorPrimary</item>
-    <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-    <item name="colorAccent">@color/colorAccent</item>
+    <item name="colorPrimary">@color/color.primary</item>
+    <item name="colorPrimaryDark">@color/color.primary.dark</item>
+    <item name="colorAccent">@color/color.accent</item>
     <!-- Navegacion -->
     <item name="windowNoTitle">true</item>
     <item name="windowActionBar">false</item>
-    <item name="background">@color/colorPrimaryTextIcons</item>
+    <item name="background">@color/color.window.background</item>
     
   
   </style>

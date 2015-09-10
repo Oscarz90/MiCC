@@ -2,19 +2,27 @@
 <resources>
   
   <!-- Colores App -->
-  <color name="colorPrimary">#3F51B5</color>
-  <color name="colorPrimaryDark">#303F9F</color>
-  <color name="colorPrimaryLight">#C5CAE9</color>
-  <color name="colorAccent">#FFC107</color>
-  <color name="colorDivider">#B6B6B6</color>  
+  <color name="color.primary">#2196F3</color>
+  <color name="color.primary.dark">#1976D2</color>
+  <color name="color.primary.light">#BBDEFB</color>
+  <color name="color.primary.text">#212121</color>
+  <color name="color.primary.icons">#FFFFFF</color>
 
-  <!-- Color Textos -->
-  <color name="colorPrimaryTextIcons">#FFFFFF</color>
-  <color name="colorPrimaryText">#212121</color>
-  <color name="colorSecondaryText">#727272</color>
+
+  <!--<color name="color.secondary.text">#727272</color>-->
+  <color name="color.secondary.text">#9E9E9E</color>
+
+  <color name="color.accent">#FFC107</color>
+  <color name="color.divider">#B6B6B6</color>
+
+  <!-- Colors -->
+  <color name="color.orange">#FF5722</color>
+  <color name="color.white">#FFFFFF</color>
+
+
   
   <!-- Color Navegacion -->
-  <color name="colorWindowBackground">#FFFFFF</color>  
-  <color name="colorNavigationBar">#303F9F</color>
+  <color name="color.window.background">#FFFFFF</color>
+  <color name="color.navigation.bar">#1976D2</color>
   
 </resources>
